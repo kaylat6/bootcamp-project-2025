@@ -1,0 +1,29 @@
+export type Blog = {
+    title: string;
+    date:string;
+    description: string;
+    image: string;
+    imageAlt: string;
+    slug: string;
+};
+
+const blogs: Blog[] = [
+    {
+    title: "Campus cat",
+    date: "9/16/25",
+    description: "Campus cat visiting our dorm! We gave him some cat treats and now he keeps coming back.",
+    image: "IMG_0456.jpg",
+    imageAlt: "Campus cat",
+    slug: "blog1.html",
+    },
+    {
+    title: "Sequel Tea",
+    date: "9/17/25",
+    description: "Tried out the new boba place with some friends today! They have a lot of different flavors, but my go to boba order is matcha.",
+    image: "IMG_0493.jpg",
+    imageAlt: "Boba",
+    slug: "blog2.html",
+    },
+];
+
+export default blogs;

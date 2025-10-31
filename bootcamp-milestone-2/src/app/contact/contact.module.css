@@ -1,0 +1,16 @@
+h1.pageTitle {
+    text-align: center;
+    font-weight: bold;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+
+.contactForm input, .contactForm textarea {
+    border: 2px solid black;
+    
+}

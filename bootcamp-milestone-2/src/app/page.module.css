@@ -1,0 +1,23 @@
+.about {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px;
+    background-color: #91a9da;
+    margin: 15px;
+    border-radius: 10px;
+}
+
+.aboutImage img{
+    max-width: 400px;
+    height: auto;
+}
+
+h1.pageTitle {
+    text-align: center;
+}
+
+.aboutText p{
+    font-size: 20px;
+    margin-left: 30px;
+}
