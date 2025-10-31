@@ -10,16 +10,16 @@ export default function Navbar() {
     // change all the "class" to "className"
     <header className={style.header}>
       <h1 className={style.logo}><Link href="/">Kayla Tran</Link></h1>
-      <nav>
+      <nav className={style.navbar}>
         <ul className={style.navList}>
         {/* We'll use Link from now on instead of <a></a>
 			      Links are just Next.js wrapper arounds <a> elements anyways
          */}
           <li><Link href="/">Home</Link></li>
-          <li><Link href="/blogs">Blog</Link></li>
+          <li><Link href="/blog">Blog</Link></li>
           <li><Link href="/portfolio">Portfolio</Link></li>
           <li><Link href="/resume">Resume</Link></li>
-          <li><Link href="/about">Contact</Link></li>
+          <li><Link href="/contact">Contact</Link></li>
 				{/* More Links ... */}
         </ul>
       </nav>
