@@ -1,0 +1,22 @@
+.blogContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 600px;
+}
+
+.blogImage {
+    height: 350px;
+    width: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.blogInfo {
+    padding-left: 20px;
+}
+
+.blogTitle {
+    font-size: 20px;
+    color: #6B9CC7;
+}

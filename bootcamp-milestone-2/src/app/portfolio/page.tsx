@@ -1,21 +1,39 @@
-import React from "react";
-import style from "./portfolio.module.css";
+import React from 'react';
+import style from './portfolio.module.css';
+import ProjectPreview from '../../components/projectPreview';
+import Project from '../../database/projectSchema';
+import connectDB from '../../database/db';
 import Link from "next/link";
 
-export default function Portfolio() {
+async function getProjects(){
+  await connectDB()
+
+  try {
+      const projects = await Project.find().sort({ date: -1 }).orFail()
+      return projects
+  } catch (err) {
+      return null
+  }
+}
+
+export default async function Portfolio() {
+  const projects = await getProjects();
+
+  if (!projects) {
+    return <div>Error.</div>
+  } 
+
   return (
-    <main>
-        <h1 className={style.pageTitle}>Portfolio</h1>
-            <div className={style.project}>
-                <Link href="/">
-                    <img src="website.png" alt="A photo of personal website." width={500}/>
-                </Link>
-                <div className={style.projectDetails}>
-                    <p className={style.projectName}>Kayla's Website</p>
-                    <p className={style.projectDescription}>This is a personal website I made with Hack4Impact's starter pack.</p>
-                    <Link href="/">Learn more here!</Link>
-                </div>
-            </div>
+    <main className={style.container}>
+      {projects.map(project => (
+        <ProjectPreview
+          title = {project.title}
+          description = {project.description}
+          link = {project.link}
+          image = {project.image}
+          image_alt = {project.image_alt}
+      />
+    ))}
     </main>
   );
 }
