@@ -34,7 +34,6 @@ export default async function BlogPage() {
           image={blog.image}
           image_alt={blog.image_alt}
           slug={blog.slug}
-          comments={blog.comments}
       />
     ))}
     </main>
