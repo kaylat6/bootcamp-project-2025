@@ -1,0 +1,29 @@
+.formContainer {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+.input, .textarea {
+    text-align: center;
+    padding: 10px;
+    border: 2px solid;
+    max-width: 300px;
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.submitButton {
+    border: 2px solid;
+    border-radius: 3px;
+    background: lightblue;
+    margin-bottom: 20px;
+    width: 200px;
+    margin: 0 auto;
+    padding: 10px 10px;
+}
+
+.submitButton:hover {
+    background-color: #e7e7e7;
+}
